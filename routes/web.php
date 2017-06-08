@@ -18,3 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//latihan controller
+Route::get('/percobaan', 'PrakerinController@percobaan');
+Route::get('/buah', 'PrakerinController@buah');
+Route::get('/barang', 'PrakerinController@barang');
+Route::get('/kendaraan', 'PrakerinController@kendaraan');
+Route::get('/hobi', 'PrakerinController@hobi');
+Route::get('halaman/{id}', 'PrakerinController@param');
+Route::get('/{a}', 'PrakerinController@parameter');
