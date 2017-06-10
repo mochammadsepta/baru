@@ -15,15 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::get('nola', 'LatihanController@percobaan');
+Route::get('satu', 'LatihanController@satu');
+Route::get('dua', 'LatihanController@dua');
+Route::get('tiga', 'LatihanController@tiga');
+Route::get('empat', 'LatihanController@empat');
+Route::get('lima', 'LatihanController@lima');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-//latihan controller
-Route::get('/percobaan', 'PrakerinController@percobaan');
-Route::get('/buah', 'PrakerinController@buah');
-Route::get('/barang', 'PrakerinController@barang');
-Route::get('/kendaraan', 'PrakerinController@kendaraan');
-Route::get('/hobi', 'PrakerinController@hobi');
-Route::get('halaman/{id}', 'PrakerinController@param');
-Route::get('/{a}', 'PrakerinController@parameter');
+// Route::get('/{id}', 'LatihanController@coba');
+Route::get('/test', 'DataController@test2');
+Route::get('/test3/{nama}', 'DataController@test3');
+// Route::get('/test/{id}', 'DataController@test2');
